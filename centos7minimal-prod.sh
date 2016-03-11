@@ -8,7 +8,7 @@ systemctl disable NetworkManager
 yum -y install deltarpm yum-cron
 
 #check if we will install a new kernel
-if [ $(yum -q check-update | grep -c "^kernel" ) -gt 0]
+if [ $(yum -q check-update | grep -c "^kernel" ) -gt 0 ]
 then
 reboot=1
 fi

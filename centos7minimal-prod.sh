@@ -26,13 +26,13 @@ fi
 
 #Configure yum-cron to auto install security updates
 cp -v /etc/yum/yum-cron.conf /etc/yum/yum-cron.conf_backup && \
-sed -i s/update_cmd\ \=\ \default/update_cmd\ \=\ \security/ /etc/yum/yum-cron.conf \
-sed -i s/apply_updates\ \=\ \no/apply_updates\ \=\ \yes/ /etc/yum/yum-cron.conf
+sed -i 's/update_cmd\ \=\ \default/update_cmd\ \=\ \security/' /etc/yum/yum-cron.conf \
+sed -i 's/apply_updates\ \=\ \no/apply_updates\ \=\ \yes/' /etc/yum/yum-cron.conf
 
 #start yum-cron
 systemctl start yum-cron
 
-if [ $reboot -eq '1' ]
+if [ $(echo $reboot) -eq '1' ]
 then
   echo 'A reboot is required'
   echo  'Reboot in '

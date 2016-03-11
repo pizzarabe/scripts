@@ -1,5 +1,5 @@
 #!/bin/sh
-
+reboot=0
 #stop and disable NetworkManager (I don't need/want that!)
 systemctl stop NetworkManager
 systemctl disable NetworkManager

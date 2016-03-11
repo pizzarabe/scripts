@@ -48,4 +48,8 @@ then
   sleep 1
   echo 'rebooting...'
  reboot now
+
+ else
+   echo "Done...!"
+
 fi

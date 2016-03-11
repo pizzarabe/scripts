@@ -36,15 +36,15 @@ if [ $(echo $reboot) -eq '1' ]
 then
   echo 'A reboot is required'
   echo  'Reboot in '
-  echo -n '5 \r'
+  echo -en '5 \r'
   sleep 1
-  echo -n '4 \r'
+  echo -en '4 \r'
   sleep 1
-  echo -n '3 \r'
+  echo -en '3 \r'
   sleep 1
-  echo -n '2 \r'
+  echo -en '2 \r'
   sleep 1
-  echo -n '1 \r'
+  echo -en '1 \r'
   sleep 1
   echo 'rebooting...'
  reboot now

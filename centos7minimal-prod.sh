@@ -32,7 +32,7 @@ sed -i s/apply_updates\ \=\ \no/apply_updates\ \=\ \yes/ /etc/yum/yum-cron.conf
 #start yum-cron
 systemctl start yum-cron
 
-if [ $reboot -eq '1']
+if [ $reboot -eq '1' ]
 then
   echo 'A reboot is required'
   echo  'Reboot in '

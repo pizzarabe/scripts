@@ -30,7 +30,7 @@ fi
 
 # Check if yum-cron.conf_backup already exists
 
-if [ -e /etc/yum/yum-cron.conf_backup ]
+if [ ! -e /etc/yum/yum-cron.conf_backup ]
 then
 #Configure yum-cron to auto install security updates
 cp -v /etc/yum/yum-cron.conf /etc/yum/yum-cron.conf_backup && \

@@ -22,6 +22,7 @@ then
   #install "open-vm-tools" if running in VMware
   if [ $(rpm -qa | grep -c "open-vm-tools") -eq 0 ]
   #but check if "open-vm-tools" is already installed
+  then
   yum -y install open-vm-tools
   reboot=1
   fi
